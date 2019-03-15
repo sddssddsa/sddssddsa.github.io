@@ -480,14 +480,14 @@
 
       
         
-          
-            <h2 id="1、-cin"><a href="#1、-cin" class="headerlink" title="1、 cin"></a>1、 <font color="orange">cin</font></h2><h3 id="最普通的cin函数是直接从缓冲区取数据。int-a-；-cin-gt-gt-a-遇到结束符就结束，例如空格-回车就不读入-类似的还有数组，当键盘输入回车空格时，a-不存储空格或回车。-当输入一个字符串时，cin遇到空格和回车就停止读入。"><a href="#最普通的cin函数是直接从缓冲区取数据。int-a-；-cin-gt-gt-a-遇到结束符就结束，例如空格-回车就不读入-类似的还有数组，当键盘输入回车空格时，a-不存储空格或回车。-当输入一个字符串时，cin遇到空格和回车就停止读入。" class="headerlink" title="最普通的cin函数是直接从缓冲区取数据。int a ； cin&gt;&gt;a 遇到结束符就结束，例如空格 回车就不读入 类似的还有数组，当键盘输入回车空格时，a[ ]不存储空格或回车。 当输入一个字符串时，cin遇到空格和回车就停止读入。"></a>最普通的cin函数是直接从缓冲区取数据。int a ； cin&gt;&gt;a 遇到结束符就结束，例如空格 回车就不读入 类似的还有数组，当键盘输入回车空格时，a[ ]不存储空格或回车。 当输入一个字符串时，cin遇到空格和回车就停止读入。</h3><hr>
-<h2 id="2、-cin-get"><a href="#2、-cin-get" class="headerlink" title="2、 cin.get"></a>2、 <font color="orange">cin.get</font></h2><h3 id="（1）char-a-可以用-a-cin-get-或cin-get-a"><a href="#（1）char-a-可以用-a-cin-get-或cin-get-a" class="headerlink" title="（1）char a  可以用 a=cin.get();或cin.get(a);"></a>（1）char a  可以用 a=cin.get();或cin.get(a);<br></h3><h3 id="（2）cin-get-可以用于接受字符串，可以接收空格-cin-get-字符数組名-接收字符数目-char-a-20-cin-get-a-20-接收19个字符，并加上一个’-0’。"><a href="#（2）cin-get-可以用于接受字符串，可以接收空格-cin-get-字符数組名-接收字符数目-char-a-20-cin-get-a-20-接收19个字符，并加上一个’-0’。" class="headerlink" title="（2）cin.get 可以用于接受字符串，可以接收空格     cin.get(字符数組名,接收字符数目) char a[20];cin.get(a,20);//接收19个字符，并加上一个’\0’。"></a>（2）cin.get 可以用于接受字符串，可以接收空格   <br>  cin.get(字符数組名,接收字符数目) char a[20];cin.get(a,20);//接收19个字符，并加上一个’\0’。</h3><hr>
-<h2 id="3、-cin-getline"><a href="#3、-cin-getline" class="headerlink" title="3、 cin.getline()"></a>3、 <font color="orange">cin.getline()</font></h2><h3 id="与cin-get类似-cin-getline有3个参数，分别是字符数组的名字（不能用string），读取的长度，结束字符，一般结束字符为’-0’时可省略，不读取结束字符。唯一区别是cin-get遇到结束符后指针不变，而cin-getline的指针移到结束符下一位。char-m-20-cin-getline-m-5-cin-get-m-5"><a href="#与cin-get类似-cin-getline有3个参数，分别是字符数组的名字（不能用string），读取的长度，结束字符，一般结束字符为’-0’时可省略，不读取结束字符。唯一区别是cin-get遇到结束符后指针不变，而cin-getline的指针移到结束符下一位。char-m-20-cin-getline-m-5-cin-get-m-5" class="headerlink" title="与cin.get类似 cin.getline有3个参数，分别是字符数组的名字（不能用string），读取的长度，结束字符，一般结束字符为’\0’时可省略，不读取结束字符。唯一区别是cin.get遇到结束符后指针不变，而cin.getline的指针移到结束符下一位。char m[20]; cin.getline(m,5); // cin.get(m,5);"></a>与cin.get类似 cin.getline有3个参数，分别是字符数组的名字（不能用string），读取的长度，结束字符，一般结束字符为’\0’时可省略，不读取结束字符。唯一区别是cin.get遇到结束符后指针不变，而cin.getline的指针移到结束符下一位。char m[20]; cin.getline(m,5); // cin.get(m,5);</h3><hr>
-<h2 id="4、-getline"><a href="#4、-getline" class="headerlink" title="4、 getline()"></a>4、 <font color="orange">getline()</font></h2><h3 id="可以接收空格并输出，其头文件与以上不同，包含在-include-lt-string-gt-中，用法也是针对string变量，可以读取空格，遇到’-n’结束-，例如-string-m；-getline（cin-m"><a href="#可以接收空格并输出，其头文件与以上不同，包含在-include-lt-string-gt-中，用法也是针对string变量，可以读取空格，遇到’-n’结束-，例如-string-m；-getline（cin-m" class="headerlink" title="可以接收空格并输出，其头文件与以上不同，包含在#include&lt; string &gt; 中，用法也是针对string变量，可以读取空格，遇到’\n’结束 ，例如 string m； getline（cin,m);"></a>可以接收空格并输出，其头文件与以上不同，包含在#include&lt; string &gt; 中，用法也是针对string变量，可以读取空格，遇到’\n’结束 ，例如 string m； getline（cin,m);</h3><hr>
-<h2 id="5、-gets"><a href="#5、-gets" class="headerlink" title="5、 gets()"></a>5、 <font color="orange">gets()</font></h2><h3 id="头文件为-include-lt-stdio-h-gt-，对象为字符数组-。例如char-a-20-gets-a-此处不能写出a-gets"><a href="#头文件为-include-lt-stdio-h-gt-，对象为字符数组-。例如char-a-20-gets-a-此处不能写出a-gets" class="headerlink" title="头文件为#include&lt;stdio.h&gt;，对象为字符数组 。例如char a[20]; gets(a); //此处不能写出a=gets();"></a>头文件为#include&lt;stdio.h&gt;，对象为字符数组 。例如char a[20]; gets(a); //此处不能写出<del>a=gets();</del></h3><hr>
-
-          
+          <p>主要是整理一下常用的输入输出方法 （不仅仅限于cin和scanf，例如getline等的详细用法）</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/25/cin,cin.get等用法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -760,11 +760,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-  <span class="post-meta-divider">|</span>
 
 
 
@@ -815,6 +811,8 @@
   
 
 
+  
+
 
 
 
@@ -853,6 +851,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
