@@ -82,7 +82,7 @@
 <meta name="description" content="努力活下去">
 <meta property="og:type" content="website">
 <meta property="og:title" content="苏方兴">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://sddssddsa.github.io/index.html">
 <meta property="og:site_name" content="苏方兴">
 <meta property="og:description" content="努力活下去">
 <meta property="og:locale" content="zh-Hans">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://sddssddsa.github.io/">
 
 
 
@@ -189,6 +189,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -231,12 +251,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/26/pta乙级1087/">
+    <link itemprop="mainEntityOfPage" href="http://sddssddsa.github.io/2019/01/26/pta乙级1087/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="苏方兴">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="https://tp-1258788633.cos.ap-chengdu.myqcloud.com/1552668993864.gif?q-sign-algorithm=sha1&q-ak=AKIDhQ2Z91r8qRyL9MDq8VYtwARzCWRCSNZc&q-sign-time=1552702933;1552704733&q-key-time=1552702933;1552704733&q-header-list=&q-url-param-list=&q-signature=3e475c9aa5f6833291735e8baa7c0a92b41c3a7b&x-cos-security-token=e7293d782eafad1130f915c953a5cfcdf86670f610001">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -346,7 +366,6 @@
         
           <p><font color="red" size="8">1087</font> <a href="https://pintia.cn/problem-sets/994805260223102976/problems/1038429191091781632" target="_blank" rel="noopener">有多少不同的值 </a></p>
 <h2 id="题目：当自然数-n-依次取-1、2、3、……、N-时，算式-⌊n-2⌋-⌊n-3⌋-⌊n-5⌋-有多少个不同的值？（注：⌊x⌋-为取整函数，表示不超过-x-的最大自然数，即-x-的整数部分。）"><a href="#题目：当自然数-n-依次取-1、2、3、……、N-时，算式-⌊n-2⌋-⌊n-3⌋-⌊n-5⌋-有多少个不同的值？（注：⌊x⌋-为取整函数，表示不超过-x-的最大自然数，即-x-的整数部分。）" class="headerlink" title="题目：当自然数 n 依次取 1、2、3、……、N 时，算式 ⌊n/2⌋+⌊n/3⌋+⌊n/5⌋ 有多少个不同的值？（注：⌊x⌋ 为取整函数，表示不超过 x 的最大自然数，即 x 的整数部分。）"></a>题目：<font size="3">当自然数 n 依次取 1、2、3、……、N 时，算式 ⌊n/2⌋+⌊n/3⌋+⌊n/5⌋ 有多少个不同的值？（注：⌊x⌋ 为取整函数，表示不超过 x 的最大自然数，即 x 的整数部分。）</font></h2><hr>
-<h2 id="思路：水题一道，看到题目时，想到了桶排序的方法，以牺牲空间的代价换取时间。第一次提交的时候第3个测试点段错误了，发现我的数组开小了，开的是10005，发现当取1e4时，桶排序最大值应该取5000-3333-2000，应为10333，所以将数组换为11005，直接ac。网上还有一种用map的做法，每天要开始复习一下stl的用法了。。。"><a href="#思路：水题一道，看到题目时，想到了桶排序的方法，以牺牲空间的代价换取时间。第一次提交的时候第3个测试点段错误了，发现我的数组开小了，开的是10005，发现当取1e4时，桶排序最大值应该取5000-3333-2000，应为10333，所以将数组换为11005，直接ac。网上还有一种用map的做法，每天要开始复习一下stl的用法了。。。" class="headerlink" title="思路：水题一道，看到题目时，想到了桶排序的方法，以牺牲空间的代价换取时间。第一次提交的时候第3个测试点段错误了，发现我的数组开小了，开的是10005，发现当取1e4时，桶排序最大值应该取5000+3333+2000，应为10333，所以将数组换为11005，直接ac。网上还有一种用map的做法，每天要开始复习一下stl的用法了。。。"></a>思路：<font size="3">水题一道，看到题目时，想到了桶排序的方法，以牺牲空间的代价换取时间。第一次提交的时候第3个测试点段错误了，发现我的数组开小了，开的是10005，发现当取1e4时，桶排序最大值应该取5000+3333+2000，应为10333，所以将数组换为11005，直接ac。网上还有一种用map的做法，每天要开始复习一下stl的用法了。。。</font></h2>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/01/26/pta乙级1087/#more" rel="contents">
@@ -400,12 +419,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/25/cin,cin.get等用法/">
+    <link itemprop="mainEntityOfPage" href="http://sddssddsa.github.io/2019/01/25/cin,cin.get等用法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="苏方兴">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="https://tp-1258788633.cos.ap-chengdu.myqcloud.com/1552668993864.gif?q-sign-algorithm=sha1&q-ak=AKIDhQ2Z91r8qRyL9MDq8VYtwARzCWRCSNZc&q-sign-time=1552702933;1552704733&q-key-time=1552702933;1552704733&q-header-list=&q-url-param-list=&q-signature=3e475c9aa5f6833291735e8baa7c0a92b41c3a7b&x-cos-security-token=e7293d782eafad1130f915c953a5cfcdf86670f610001">
+      <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -543,140 +562,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/23/sfx-first-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="苏方兴">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://tp-1258788633.cos.ap-chengdu.myqcloud.com/1552668993864.gif?q-sign-algorithm=sha1&q-ak=AKIDhQ2Z91r8qRyL9MDq8VYtwARzCWRCSNZc&q-sign-time=1552702933;1552704733&q-key-time=1552702933;1552704733&q-header-list=&q-url-param-list=&q-signature=3e475c9aa5f6833291735e8baa7c0a92b41c3a7b&x-cos-security-token=e7293d782eafad1130f915c953a5cfcdf86670f610001">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="苏方兴">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/23/sfx-first-blog/" itemprop="url">苏方兴的第一篇博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-23T18:47:09+08:00">
-                2019-01-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/01/23/sfx-first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/23/sfx-first-blog/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="前言-感谢东佬的教程"><a href="#前言-感谢东佬的教程" class="headerlink" title="前言.感谢东佬的教程"></a>前言.感谢<font color="red">东佬</font>的教程<br><br></h1><h2 id="nbsp-nbsp-让我学会了如何在GitHub上搭博客-nbsp-（绑定域名和排版美化的事情还是等以后再弄吧）-nbsp-nbsp-以后遇到不会的要多百度"><a href="#nbsp-nbsp-让我学会了如何在GitHub上搭博客-nbsp-（绑定域名和排版美化的事情还是等以后再弄吧）-nbsp-nbsp-以后遇到不会的要多百度" class="headerlink" title="&nbsp;&nbsp;让我学会了如何在GitHub上搭博客&nbsp;（绑定域名和排版美化的事情还是等以后再弄吧）&nbsp;&nbsp;以后遇到不会的要多百度"></a><font color="blue">&nbsp;&nbsp;让我学会了如何在GitHub上搭博客</font><br>&nbsp;<br>（绑定域名和排版美化的事情还是等以后再弄吧）<br><br><font color="red">&nbsp;&nbsp;以后遇到不会的要多</font><a href="http://baidu.com" target="_blank" rel="noopener">百度</a></h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/01/23/sfx-first-blog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -715,7 +600,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="https://tp-1258788633.cos.ap-chengdu.myqcloud.com/1552668993864.gif?q-sign-algorithm=sha1&q-ak=AKIDhQ2Z91r8qRyL9MDq8VYtwARzCWRCSNZc&q-sign-time=1552702933;1552704733&q-key-time=1552702933;1552704733&q-header-list=&q-url-param-list=&q-signature=3e475c9aa5f6833291735e8baa7c0a92b41c3a7b&x-cos-security-token=e7293d782eafad1130f915c953a5cfcdf86670f610001" alt="苏方兴">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="苏方兴">
             
               <p class="site-author-name" itemprop="name">苏方兴</p>
               <p class="site-description motion-element" itemprop="description">努力活下去</p>
@@ -728,7 +613,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
