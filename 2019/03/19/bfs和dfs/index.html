@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="算法,">
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="努力活下去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="苏方兴">
-<meta property="og:url" content="http://sddssddsa.github.io/archives/index.html">
+<meta name="description" content="简单dfs和bfs DFS: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。从上图看就是A-&amp;gt;B-&amp;gt;D-&amp;gt;I-&amp;gt;K(此时返回节点，一直返回到B)-&amp;gt;E-&amp;gt;J -&amp;gt;F… BFS: 广度优先搜索，层层探索,找到最简路径。从上图看就是A-&amp;gt;B-&amp;gt;C-&amp;gt;D-&amp;gt;E-&amp;gt;F-&amp;gt">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bfs和dfs">
+<meta property="og:url" content="http://sddssddsa.github.io/2019/03/19/bfs和dfs/index.html">
 <meta property="og:site_name" content="苏方兴">
-<meta property="og:description" content="努力活下去">
+<meta property="og:description" content="简单dfs和bfs DFS: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。从上图看就是A-&amp;gt;B-&amp;gt;D-&amp;gt;I-&amp;gt;K(此时返回节点，一直返回到B)-&amp;gt;E-&amp;gt;J -&amp;gt;F… BFS: 广度优先搜索，层层探索,找到最简路径。从上图看就是A-&amp;gt;B-&amp;gt;C-&amp;gt;D-&amp;gt;E-&amp;gt;F-&amp;gt">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://sddssddsa.github.io/2019/03/19/bfs和dfs/tu.png">
+<meta property="og:updated_time" content="2019-03-26T05:36:30.695Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苏方兴">
-<meta name="twitter:description" content="努力活下去">
+<meta name="twitter:title" content="bfs和dfs">
+<meta name="twitter:description" content="简单dfs和bfs DFS: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。从上图看就是A-&amp;gt;B-&amp;gt;D-&amp;gt;I-&amp;gt;K(此时返回节点，一直返回到B)-&amp;gt;E-&amp;gt;J -&amp;gt;F… BFS: 广度优先搜索，层层探索,找到最简路径。从上图看就是A-&amp;gt;B-&amp;gt;C-&amp;gt;D-&amp;gt;E-&amp;gt;F-&amp;gt">
+<meta name="twitter:image" content="http://sddssddsa.github.io/2019/03/19/bfs和dfs/tu.png">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://sddssddsa.github.io/archives/">
+  <link rel="canonical" href="http://sddssddsa.github.io/2019/03/19/bfs和dfs/">
 
 
 
 
 
-  <title>归档 | 苏方兴</title>
+  <title>bfs和dfs | 苏方兴</title>
   
 
 
@@ -142,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,212 +272,170 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sddssddsa.github.io/2019/03/19/bfs和dfs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="苏方兴">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苏方兴">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">bfs和dfs</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-19T00:03:12+08:00">
+                2019-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/19/bfs和dfs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/19/bfs和dfs/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/21/二分算法/" itemprop="url">
-              
-                <span itemprop="name">二分查找算法</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-21T09:52:18+08:00" content="2019-03-21">
-          03-21
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/19/标准库模板/" itemprop="url">
-              
-                <span itemprop="name">标准库模板</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-19T20:15:00+08:00" content="2019-03-19">
-          03-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/19/bfs和dfs/" itemprop="url">
-              
-                <span itemprop="name">bfs和dfs</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-19T00:03:12+08:00" content="2019-03-19">
-          03-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/26/pta乙级1087/" itemprop="url">
-              
-                <span itemprop="name">pta乙级1087</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-26T21:56:17+08:00" content="2019-01-26">
-          01-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h1 id="简单dfs和bfs"><a href="#简单dfs和bfs" class="headerlink" title="简单dfs和bfs"></a>简单<font color="orange">dfs</font>和<font color="orange">bfs</font></h1><p><img src="./tu.png" width="500" height="230"></p>
+<h2 id="DFS-深度优先搜索-俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。"><a href="#DFS-深度优先搜索-俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。" class="headerlink" title="DFS: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。"></a><font color="DeepSkyBlue">DFS</font>: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。</h2><h2 id="从上图看就是A-gt-B-gt-D-gt-I-gt-K-此时返回节点，一直返回到B-gt-E-gt-J-gt-F…"><a href="#从上图看就是A-gt-B-gt-D-gt-I-gt-K-此时返回节点，一直返回到B-gt-E-gt-J-gt-F…" class="headerlink" title="从上图看就是A-&gt;B-&gt;D-&gt;I-&gt;K(此时返回节点，一直返回到B)-&gt;E-&gt;J -&gt;F…"></a>从上图看就是<font color="Aquamarine">A-&gt;B-&gt;D-&gt;I-&gt;K(此时返回节点，一直返回到B)-&gt;E-&gt;J -&gt;F…</font></h2><p><br></p>
+<h2 id="BFS-广度优先搜索，层层探索-找到最简路径。"><a href="#BFS-广度优先搜索，层层探索-找到最简路径。" class="headerlink" title="BFS: 广度优先搜索，层层探索,找到最简路径。"></a><font color="DeepSkyBlue">BFS</font>: 广度优先搜索，层层探索,找到最简路径。</h2><h2 id="从上图看就是A-gt-B-gt-C-gt-D-gt-E-gt-F-gt-G-gt-H-…"><a href="#从上图看就是A-gt-B-gt-C-gt-D-gt-E-gt-F-gt-G-gt-H-…" class="headerlink" title="从上图看就是A-&gt;B-&gt;C-&gt;D-&gt;E-&gt;F-&gt;G-&gt;H …"></a>从上图看就是<font color="Aquamarine">A-&gt;B-&gt;C-&gt;D-&gt;E-&gt;F-&gt;G-&gt;H …</font></h2><hr>
+<a id="more"></a>
+<h2 id="dfs在于寻找所有答案（全排列）使用了stack的思想而bfs在于寻找最优解，使用了queue的思想"><a href="#dfs在于寻找所有答案（全排列）使用了stack的思想而bfs在于寻找最优解，使用了queue的思想" class="headerlink" title="dfs在于寻找所有答案（全排列）使用了stack的思想而bfs在于寻找最优解，使用了queue的思想"></a>dfs在于寻找所有答案（全排列）使用了<font color="DeepSkyBlue">stack</font>的思想而bfs在于寻找最优解，使用了<font color="DeepSkyBlue">queue</font>的思想<br></h2><h2 id="dfs也可寻找最优解，但所用时间比bfs要长"><a href="#dfs也可寻找最优解，但所用时间比bfs要长" class="headerlink" title="dfs也可寻找最优解，但所用时间比bfs要长"></a>dfs也可寻找最优解，但所用时间比bfs要长</h2><hr>
+<h2 id="用dfs来解决全排列问题，实现从1到n的全排列"><a href="#用dfs来解决全排列问题，实现从1到n的全排列" class="headerlink" title="用dfs来解决全排列问题，实现从1到n的全排列"></a>用dfs来解决全排列问题，实现从1到n的全排列</h2><p>啊哈算法中将该问题看做把n张扑克牌放入n个盒子中，代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void dfs(int x,int n)</span><br><span class="line">&#123;</span><br><span class="line">	if(x==n+1) //表示站在第n+1个盒子前，输出以前的排列  </span><br><span class="line">	&#123;</span><br><span class="line">		for(int i=1;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;a[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">		return ;</span><br><span class="line">	&#125;	</span><br><span class="line">		for(int i=1;i&lt;=n;i++) //判断手里剩下哪些扑克牌 </span><br><span class="line">		&#123;</span><br><span class="line">			if(!b[i])  //若b[i]==0,表示扑克牌在手中 </span><br><span class="line">			&#123;</span><br><span class="line">				a[x]=i;</span><br><span class="line">				b[i]=1;		//将扑克牌放入盒子中并标记 </span><br><span class="line">				dfs(x+1,n);        //走向下一个盒子前 </span><br><span class="line">				b[i]=0;           //把手中牌放回 </span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;</span><br><span class="line">		return ;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="迷宫问题"><a href="#迷宫问题" class="headerlink" title="迷宫问题"></a>迷宫问题</h2><h3 id="dfs模板"><a href="#dfs模板" class="headerlink" title="dfs模板"></a>dfs模板</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">int m,n;    //m*n的图</span><br><span class="line">int vis[m][n];</span><br><span class="line">int go[4][2]=&#123;&#123;-1,0&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;0,1&#125;&#125;;</span><br><span class="line"></span><br><span class="line">void dfs(int x,int y)</span><br><span class="line">&#123;</span><br><span class="line">    if(x&lt;0||x&gt;m||y&lt;0||y&gt;n)</span><br><span class="line">    &#123;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    if(vis[x][y])</span><br><span class="line">    &#123;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    vis[x][y]=true;</span><br><span class="line">    for(int i=0;i&lt;4;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        int nx,ny;</span><br><span class="line">        nx=x+go[i][0];</span><br><span class="line">        ny=y+go[i][1];</span><br><span class="line">        dfs(nx,ny);</span><br><span class="line">    &#125;</span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="bfs模板"><a href="#bfs模板" class="headerlink" title="bfs模板"></a>bfs模板</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">struct data</span><br><span class="line">&#123;</span><br><span class="line">    int x,y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int m,n;    //m*n的图</span><br><span class="line">int vis[m][n];</span><br><span class="line">int go[4][2]=&#123;&#123;-1,0&#125;,&#123;1,0&#125;,&#123;0,-1&#125;,&#123;0,1&#125;&#125;;</span><br><span class="line"></span><br><span class="line">queue&lt;data&gt; q;</span><br><span class="line"></span><br><span class="line">void bfs()</span><br><span class="line">&#123;</span><br><span class="line">    while(!q.empty)</span><br><span class="line">    &#123;</span><br><span class="line">        data f=q.front();</span><br><span class="line">        for(int i=0;i&lt;4;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            int nx,ny;</span><br><span class="line">            nx=f.x+go[i][0];</span><br><span class="line">            ny=f.y+go[i][1];</span><br><span class="line">            if(nx&lt;0||nx&gt;m||ny&lt;0||ny&gt;n)</span><br><span class="line">            &#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            if(vis[nx][ny])</span><br><span class="line">            &#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            vis[nx][ny]=true;</span><br><span class="line">            q.push(&#123;nx,ny&#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        q.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/25/cin,cin.get等用法/" itemprop="url">
-              
-                <span itemprop="name">“整理一下c++中的输入”</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-25T21:20:19+08:00" content="2019-01-25">
-          01-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/26/pta乙级1087/" rel="next" title="pta乙级1087">
+                <i class="fa fa-chevron-left"></i> pta乙级1087
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/19/标准库模板/" rel="prev" title="标准库模板">
+                标准库模板 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -481,6 +443,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -500,12 +469,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
       <div id="music163player">
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=2711209477&auto=1&height=90"></iframe>
       </div>
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -567,6 +545,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单dfs和bfs"><span class="nav-number">1.</span> <span class="nav-text">简单dfs和bfs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DFS-深度优先搜索-俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。"><span class="nav-number">1.1.</span> <span class="nav-text">DFS: 深度优先搜索,俗称“不到南墙不回头”，先对一条路探测到底，然后返回上一层，继续探索，直到找到所有的可能性。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从上图看就是A-gt-B-gt-D-gt-I-gt-K-此时返回节点，一直返回到B-gt-E-gt-J-gt-F…"><span class="nav-number">1.2.</span> <span class="nav-text">从上图看就是A-&gt;B-&gt;D-&gt;I-&gt;K(此时返回节点，一直返回到B)-&gt;E-&gt;J -&gt;F…</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFS-广度优先搜索，层层探索-找到最简路径。"><span class="nav-number">1.3.</span> <span class="nav-text">BFS: 广度优先搜索，层层探索,找到最简路径。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从上图看就是A-gt-B-gt-C-gt-D-gt-E-gt-F-gt-G-gt-H-…"><span class="nav-number">1.4.</span> <span class="nav-text">从上图看就是A-&gt;B-&gt;C-&gt;D-&gt;E-&gt;F-&gt;G-&gt;H …</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs在于寻找所有答案（全排列）使用了stack的思想而bfs在于寻找最优解，使用了queue的思想"><span class="nav-number">1.5.</span> <span class="nav-text">dfs在于寻找所有答案（全排列）使用了stack的思想而bfs在于寻找最优解，使用了queue的思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dfs也可寻找最优解，但所用时间比bfs要长"><span class="nav-number">1.6.</span> <span class="nav-text">dfs也可寻找最优解，但所用时间比bfs要长</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用dfs来解决全排列问题，实现从1到n的全排列"><span class="nav-number">1.7.</span> <span class="nav-text">用dfs来解决全排列问题，实现从1到n的全排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迷宫问题"><span class="nav-number">1.8.</span> <span class="nav-text">迷宫问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dfs模板"><span class="nav-number">1.8.1.</span> <span class="nav-text">dfs模板</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bfs模板"><span class="nav-number">1.8.2.</span> <span class="nav-text">bfs模板</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -701,6 +695,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
