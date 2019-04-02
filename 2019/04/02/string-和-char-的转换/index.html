@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="c++,">
 
 
 
@@ -79,16 +79,23 @@
 
 
 
-<meta name="description" content="努力活下去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="苏方兴">
-<meta property="og:url" content="http://sddssddsa.github.io/archives/2019/01/index.html">
+<meta name="description" content="char转string直接转换string转char*使用data()函数  (ps:在devc++中,必须加const，否则会报错) 使用c_str()函数    string转char使用copy()函数">
+<meta name="keywords" content="c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="string 和 char 的转换">
+<meta property="og:url" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/index.html">
 <meta property="og:site_name" content="苏方兴">
-<meta property="og:description" content="努力活下去">
+<meta property="og:description" content="char转string直接转换string转char*使用data()函数  (ps:在devc++中,必须加const，否则会报错) 使用c_str()函数    string转char使用copy()函数">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/string-和-char-的转换/1.png">
+<meta property="og:image" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/string-和-char-的转换/2.png">
+<meta property="og:image" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/string-和-char-的转换/3.png">
+<meta property="og:image" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/string-和-char-的转换/4.png">
+<meta property="og:updated_time" content="2019-04-02T12:47:29.205Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苏方兴">
-<meta name="twitter:description" content="努力活下去">
+<meta name="twitter:title" content="string 和 char 的转换">
+<meta name="twitter:description" content="char转string直接转换string转char*使用data()函数  (ps:在devc++中,必须加const，否则会报错) 使用c_str()函数    string转char使用copy()函数">
+<meta name="twitter:image" content="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/string-和-char-的转换/1.png">
 
 
 
@@ -118,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://sddssddsa.github.io/archives/2019/01/">
+  <link rel="canonical" href="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/">
 
 
 
 
 
-  <title>归档 | 苏方兴</title>
+  <title>string 和 char 的转换 | 苏方兴</title>
   
 
 
@@ -142,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,107 +275,160 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sddssddsa.github.io/2019/04/02/string-和-char-的转换/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="苏方兴">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="苏方兴">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/01/26/pta乙级1087/" itemprop="url">
-              
-                <span itemprop="name">pta乙级1087</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">string 和 char 的转换</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-26T21:56:17+08:00" content="2019-01-26">
-          01-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-02T20:12:58+08:00">
+                2019-04-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/02/string-和-char-的转换/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/string-和-char-的转换/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/01/25/cin,cin.get等用法/" itemprop="url">
-              
-                <span itemprop="name">“整理一下c++中的输入”</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-25T21:20:19+08:00" content="2019-01-25">
-          01-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="char转string"><a href="#char转string" class="headerlink" title="char转string"></a><font color="oragen">char转string</font></h1><h2 id="直接转换"><a href="#直接转换" class="headerlink" title="直接转换"></a>直接转换</h2><h2 id><a href="#" class="headerlink" title></a><img src="string-和-char-的转换/1.png" width="200" height="230"></h2><h1 id="string转char"><a href="#string转char" class="headerlink" title="string转char*"></a><font color="oragen">string转char*</font></h1><h2 id="使用data-函数"><a href="#使用data-函数" class="headerlink" title="使用data()函数"></a>使用data()函数<br></h2><p> <img src="string-和-char-的转换/2.png" width="200" height="230"><br><br> (ps:在devc++中,必须加const，否则会报错)</p>
+<h2 id="使用c-str-函数"><a href="#使用c-str-函数" class="headerlink" title="使用c_str()函数"></a>使用c_str()函数<br></h2><p>  <img src="string-和-char-的转换/3.png" width="200" height="230"><br></p>
+<hr>
+<h1 id="string转char-1"><a href="#string转char-1" class="headerlink" title="string转char"></a><font color="oragen">string转char</font></h1><h2 id="使用copy-函数"><a href="#使用copy-函数" class="headerlink" title="使用copy()函数"></a>使用copy()函数</h2><p><img src="string-和-char-的转换/4.png" width="200" height="230"><br></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/c/" rel="tag"># c++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/21/二分算法/" rel="next" title="二分查找算法">
+                <i class="fa fa-chevron-left"></i> 二分查找算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -376,6 +436,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -395,12 +462,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
       <div id="music163player">
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=2711209477&auto=1&height=90"></iframe>
       </div>
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -462,6 +538,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#char转string"><span class="nav-number">1.</span> <span class="nav-text">char转string</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接转换"><span class="nav-number">1.1.</span> <span class="nav-text">直接转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string转char"><span class="nav-number">2.</span> <span class="nav-text">string转char*</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用data-函数"><span class="nav-number">2.1.</span> <span class="nav-text">使用data()函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用c-str-函数"><span class="nav-number">2.2.</span> <span class="nav-text">使用c_str()函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#string转char-1"><span class="nav-number">3.</span> <span class="nav-text">string转char</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用copy-函数"><span class="nav-number">3.1.</span> <span class="nav-text">使用copy()函数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -596,6 +688,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
