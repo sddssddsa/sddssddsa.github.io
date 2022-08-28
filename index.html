@@ -261,7 +261,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="大数据作业调度平台"><a href="#大数据作业调度平台" class="headerlink" title="大数据作业调度平台"></a>大数据作业调度平台</h1>
+          <h1>大数据作业调度平台</h1>
+
       
     </div>
 
@@ -452,7 +453,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC-控制反转"><a href="#IOC-控制反转" class="headerlink" title="IOC 控制反转"></a>IOC 控制反转</h2><h3 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h3><ol>
+          <h1>Spring</h1>
+<h2 id="IOC-控制反转">IOC 控制反转</h2>
+<h3 id="开发步骤">开发步骤</h3>
+<ol>
 <li>创建Maven工程，pom.xml导入依赖</li>
 </ol>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
@@ -462,7 +466,6 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.2.3.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <ol start="2">
 <li>在resources路径下创建spring.xml</li>
 </ol>
@@ -473,7 +476,6 @@
 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>student<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <ol start="3">
 <li>IoC容器通过读取sping.xml文件，加载bean标签来创建文件</li>
 <li>调用API获取IoC容器中所存在的对象</li>
@@ -587,17 +589,20 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="element-ui"><a href="#element-ui" class="headerlink" title="element_ui"></a>element_ui</h2><h3 id="Icon图标"><a href="#Icon图标" class="headerlink" title="Icon图标"></a>Icon图标</h3><p>提供了一套常用的图标集合，直接用i标签集合class来使用：</p>
+          <h1>Vue</h1>
+<h2 id="element-ui">element_ui</h2>
+<h3 id="Icon图标">Icon图标</h3>
+<p>提供了一套常用的图标集合，直接用i标签集合class来使用：</p>
 <pre class="line-numbers language-Vue" data-language="Vue"><code class="language-Vue">&lt;i class&#x3D;&quot;el-icon-edit&quot;&gt;&lt;&#x2F;i&gt;
 &lt;i class&#x3D;&quot;el-icon-share&quot;&gt;&lt;&#x2F;i&gt;
 &lt;i class&#x3D;&quot;el-icon-delete&quot;&gt;&lt;&#x2F;i&gt;
 &lt;el-button type&#x3D;&quot;primary&quot; icon&#x3D;&quot;el-icon-search&quot;&gt;搜索&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>e-icon-iconName为官网定义的名称，直接去官网查找对应的图标，修改class属性即可。</p>
-<h3 id="Button按钮"><a href="#Button按钮" class="headerlink" title="Button按钮"></a>Button按钮</h3><p>是Element UI提供的一组常用的操作按钮组件，直接使用已经封装好的el-button，比如：</p>
+<h3 id="Button按钮">Button按钮</h3>
+<p>是Element UI提供的一组常用的操作按钮组件，直接使用已经封装好的el-button，比如：</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;el-button&gt;按钮&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>基于button按钮，可以使用type、plain、round、circle属性对按钮进行修饰。<br>type设置按钮样式</p>
+<p>基于button按钮，可以使用type、plain、round、circle属性对按钮进行修饰。<br>
+type设置按钮样式</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
   &lt;el-button&gt;默认按钮&lt;&#x2F;el-button&gt;
   &lt;el-button type&#x3D;&quot;primary&quot;&gt;主要按钮&lt;&#x2F;el-button&gt;
@@ -606,7 +611,6 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
   &lt;el-button type&#x3D;&quot;warning&quot;&gt;警告按钮&lt;&#x2F;el-button&gt;
   &lt;el-button type&#x3D;&quot;danger&quot;&gt;危险按钮&lt;&#x2F;el-button&gt;
 &lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>plain可以减弱按钮的背景颜色效果![avatar1]</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
     &lt;el-button plain&gt;默认按钮&lt;&#x2F;el-button&gt;
@@ -617,9 +621,6 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
     &lt;el-button type&#x3D;&quot;danger&quot; plain&gt;危险按钮&lt;&#x2F;el-button&gt;
 &lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <img src="/2022/07/29/Element_UI/20220818164409.png" class="">  
-
-
-
 <p>round 用来给按钮设置圆角</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
     &lt;el-button round&gt;圆角按钮&lt;&#x2F;el-button&gt;
@@ -630,7 +631,6 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
     &lt;el-button type&#x3D;&quot;danger&quot; round&gt;危险按钮&lt;&#x2F;el-button&gt;
 &lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <img src="/2022/07/29/Element_UI/20220818164652.png" class="">  
-
 <p>circle</p>
 <pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
     &lt;el-button circle&gt;圆角按钮 &lt;&#x2F;el-button&gt;
@@ -641,8 +641,6 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
     &lt;el-button type&#x3D;&quot;danger&quot; circle&gt;危险按钮&lt;&#x2F;el-button&gt;
 &lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <img src="/2022/07/29/Element_UI/20220819091011.png" class="">  
-
-
 
       
     </div>
