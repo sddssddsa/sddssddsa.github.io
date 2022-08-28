@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"sfx123.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":"falsefavicon"},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Spring IOC 控制反转 开发步骤  创建Maven工程，pom.xml导入依赖  &lt;dependencies&gt;     &lt;dependency&gt;         &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;         &lt;artifactId&gt;spring-context&lt;&#x2F;artifactId&gt;         &amp;l">
+  <meta name="description" content="SpringIOC 控制反转开发步骤 创建Maven工程，pom.xml导入依赖  &lt;dependencies&gt;     &lt;dependency&gt;         &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;         &lt;artifactId&gt;spring-context&lt;&#x2F;artifactId&gt;         &lt;v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring笔记">
 <meta property="og:url" content="http://sfx123.xyz/2022/07/30/Spring%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="sfx&#39;s blog">
-<meta property="og:description" content="Spring IOC 控制反转 开发步骤  创建Maven工程，pom.xml导入依赖  &lt;dependencies&gt;     &lt;dependency&gt;         &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;         &lt;artifactId&gt;spring-context&lt;&#x2F;artifactId&gt;         &amp;l">
+<meta property="og:description" content="SpringIOC 控制反转开发步骤 创建Maven工程，pom.xml导入依赖  &lt;dependencies&gt;     &lt;dependency&gt;         &lt;groupId&gt;org.springframework&lt;&#x2F;groupId&gt;         &lt;artifactId&gt;spring-context&lt;&#x2F;artifactId&gt;         &lt;v">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-30T03:01:52.000Z">
 <meta property="article:modified_time" content="2022-08-28T14:29:51.832Z">
@@ -271,10 +271,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1>Spring</h1>
-<h2 id="IOC-控制反转">IOC 控制反转</h2>
-<h3 id="开发步骤">开发步骤</h3>
-<ol>
+        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC-控制反转"><a href="#IOC-控制反转" class="headerlink" title="IOC 控制反转"></a>IOC 控制反转</h2><h3 id="开发步骤"><a href="#开发步骤" class="headerlink" title="开发步骤"></a>开发步骤</h3><ol>
 <li>创建Maven工程，pom.xml导入依赖</li>
 </ol>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
@@ -284,6 +281,7 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>5.2.3.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="2">
 <li>在resources路径下创建spring.xml</li>
 </ol>
@@ -294,6 +292,7 @@
 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>student<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="3">
 <li>IoC容器通过读取sping.xml文件，加载bean标签来创建文件</li>
 <li>调用API获取IoC容器中所存在的对象</li>
@@ -302,17 +301,18 @@
 Student student &#x3D; (Student)applicationContext.getBean(&quot;student&quot;);
 System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <span id="more"></span>
-<h3 id="IoC容器创建bean的两种方式">IoC容器创建bean的两种方式</h3>
-<ul>
+<h3 id="IoC容器创建bean的两种方式"><a href="#IoC容器创建bean的两种方式" class="headerlink" title="IoC容器创建bean的两种方式"></a>IoC容器创建bean的两种方式</h3><ul>
 <li>无参构造函数</li>
 </ul>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>student<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>给成员变量赋值</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>student<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">value</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>zhangsan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>22<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ul>
 <li>有参构造函数</li>
 </ul>
@@ -321,20 +321,16 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span> <span class="token attr-value"><span class="token punctuation attr-equals">=</span> <span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>23<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="从IoC容器中取bean">从IoC容器中取bean</h3>
-<ul>
-<li>
-<p>通过id取值</p>
+
+<h3 id="从IoC容器中取bean"><a href="#从IoC容器中取bean" class="headerlink" title="从IoC容器中取bean"></a>从IoC容器中取bean</h3><ul>
+<li><p>通过id取值</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">Student student &#x3D; (Student)applicationContext.getBean(&quot;student&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li>
-<p>通过类型取值，当IoC容器中同时存在两个以上Student Bean的时候，会抛出异常</p>
+<li><p>通过类型取值，当IoC容器中同时存在两个以上Student Bean的时候，会抛出异常</p>
   <pre class="line-numbers language-java" data-language="java"><code class="language-java">Student student &#x3D; (Student)applicationContext.getBean(Student.class);
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
-<h3 id="bean的属性中如果包含有特殊字符，如下处理即可">bean的属性中如果包含有特殊字符，如下处理即可</h3>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Classes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<h3 id="bean的属性中如果包含有特殊字符，如下处理即可"><a href="#bean的属性中如果包含有特殊字符，如下处理即可" class="headerlink" title="bean的属性中如果包含有特殊字符，如下处理即可"></a>bean的属性中如果包含有特殊字符，如下处理即可</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Classes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span> <span class="token punctuation">></span></span><span class="token cdata">&lt;![CDATA[&lt;一班>]]></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
@@ -342,8 +338,8 @@ System.out.println(student);<span aria-hidden="true" class="line-numbers-rows"><
 
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="IoC-DI">IoC DI</h3>
-<p>DI指bean之间的依赖注入，设置对象之间的级联关系。</p>
+
+<h3 id="IoC-DI"><a href="#IoC-DI" class="headerlink" title="IoC DI"></a>IoC DI</h3><p>DI指bean之间的依赖注入，设置对象之间的级联关系。</p>
 <p>Classes</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Data
 public class Classes &#123;
@@ -351,6 +347,7 @@ public class Classes &#123;
     private String name;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Student</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Data
 @AllArgsConstructor
@@ -362,6 +359,7 @@ public class Student &#123;
     private Classes classes;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>Spring-di.xml</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
@@ -382,6 +380,7 @@ public class Student &#123;
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>bean之间的级联需要ref属性完成映射，不能使用value，否则会抛出类型转换异常</p>
 <p>classes</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">
@@ -392,6 +391,7 @@ public class Classes &#123;
     private List&lt;Student&gt; studentList;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>spring-di.xml</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
@@ -426,19 +426,17 @@ public class Classes &#123;
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>18<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Spring中的bean">Spring中的bean</h3>
-<p>bean是根据scope来生成，表示bean的作用域，scope有四种类型：</p>
+
+<h3 id="Spring中的bean"><a href="#Spring中的bean" class="headerlink" title="Spring中的bean"></a>Spring中的bean</h3><p>bean是根据scope来生成，表示bean的作用域，scope有四种类型：</p>
 <ul>
 <li>singleton 单例，表示通过Spring容器获取的对象是唯一的，默认值。</li>
 <li>prototype，原型，表示通过Spring容器获取的对象是不同的。</li>
 <li>request，请求，表示在一次HTTP请求内有效。</li>
 <li>session，会话，表示一个用户会话内有效。</li>
 </ul>
-<p>request和session适用于web项目。<br>
-singleton模式下，只要加载IoC容器，无论是否从IoC中取出bean，配置文件中的bean都会被创建，对象永远只有一个。</p>
+<p>request和session适用于web项目。<br>singleton模式下，只要加载IoC容器，无论是否从IoC中取出bean，配置文件中的bean都会被创建，对象永远只有一个。</p>
 <p>prototype模式下，如果不从IoC中取bean，则不创建对象，取一次创建一个对象，取多次bean创建多次。</p>
-<h3 id="Spring的继承">Spring的继承</h3>
-<p>Spring的继承不同于Java中的继承，区别：java中的继承针对于类的，Spring的继承是针对于对象（bean）。</p>
+<h3 id="Spring的继承"><a href="#Spring的继承" class="headerlink" title="Spring的继承"></a>Spring的继承</h3><p>Spring的继承不同于Java中的继承，区别：java中的继承针对于类的，Spring的继承是针对于对象（bean）。</p>
 <p>Spring的继承中，子bean可以继承父bean中所有成员变量的值。</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.User<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
@@ -447,29 +445,26 @@ singleton模式下，只要加载IoC容器，无论是否从IoC中取出bean，�
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.User<span class="token punctuation">"</span></span> <span class="token attr-name">parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>李四<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>通过设置bean标签 parent属性建立继承关系，同时子bean可以覆盖父bean的属性值。<br>
-Spring的继承是针对对象的，所以子bean和父bean并不属于同一个数据类型，只要其成员变量列表一致即可。</p>
-<h3 id="Spring的依赖">Spring的依赖</h3>
-<p>用来设置两个bean之间的创建顺序。<br>
-IoC容器默认情况下是通过spring.xml中bean的配置顺序来决定创建顺序的，配置在前面的bean会先创建。<br>
-再不更改spring.xml配置顺序的前提下，通过设置bean之间的依赖关系，来调整bean的创建顺序。</p>
+
+<p>通过设置bean标签 parent属性建立继承关系，同时子bean可以覆盖父bean的属性值。<br>Spring的继承是针对对象的，所以子bean和父bean并不属于同一个数据类型，只要其成员变量列表一致即可。</p>
+<h3 id="Spring的依赖"><a href="#Spring的依赖" class="headerlink" title="Spring的依赖"></a>Spring的依赖</h3><p>用来设置两个bean之间的创建顺序。<br>IoC容器默认情况下是通过spring.xml中bean的配置顺序来决定创建顺序的，配置在前面的bean会先创建。<br>再不更改spring.xml配置顺序的前提下，通过设置bean之间的依赖关系，来调整bean的创建顺序。</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>account<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Account<span class="token punctuation">"</span></span> <span class="token attr-name">depends-on</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.User<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <p>上述代码的结果是先创建User，在创建Account。</p>
-<h3 id="Spring读取外部资源">Spring读取外部资源</h3>
-<p>实际开发中，数据库的配置会单独保存到后缀名为properties的文件中，方便维护和修改，如果使用spring来加载数据源，就需要在spring.xml中读取properties中的数据，这就是读取外部数据。</p>
+<h3 id="Spring读取外部资源"><a href="#Spring读取外部资源" class="headerlink" title="Spring读取外部资源"></a>Spring读取外部资源</h3><p>实际开发中，数据库的配置会单独保存到后缀名为properties的文件中，方便维护和修改，如果使用spring来加载数据源，就需要在spring.xml中读取properties中的数据，这就是读取外部数据。</p>
 <p>jdbc.properties</p>
 <pre class="line-numbers language-properties" data-language="properties"><code class="language-properties">user &#x3D; root
 password &#x3D; root
 url &#x3D; jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;library
 driverName &#x3D; com.mysql.cj.jdbc.Driver<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Spring-p-命名空间">Spring p 命名空间</h3>
-<p>p命名空间可以用来简化bean的配置。</p>
+
+<h3 id="Spring-p-命名空间"><a href="#Spring-p-命名空间" class="headerlink" title="Spring p 命名空间"></a>Spring p 命名空间</h3><p>p命名空间可以用来简化bean的配置。</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>student<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Student<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>张三<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>age</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>18<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>classes-ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>classes<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Classes<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">p:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>一班<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="Spring工厂方法">Spring工厂方法</h3>
-<p>IoC通过工厂模式创建bean有两种方式：</p>
+
+<h3 id="Spring工厂方法"><a href="#Spring工厂方法" class="headerlink" title="Spring工厂方法"></a>Spring工厂方法</h3><p>IoC通过工厂模式创建bean有两种方式：</p>
 <ul>
 <li>静态工厂方法</li>
 <li>实例工厂方法</li>
@@ -486,6 +481,7 @@ public class Car &#123;
     private String brand;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="2">
 <li>创建静态工厂类、静态工厂方法</li>
 </ol>
@@ -500,14 +496,15 @@ public class Car &#123;
         return carMap.get(num);
     &#125;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="3">
 <li>spring.xml</li>
 </ol>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>car1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.factory.StacticCarFactory<span class="token punctuation">"</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>getCar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>factory-method指向静态方法<br>
-constructor-arg的value属性是调用静态方法传入的参数</p>
+
+<p>factory-method指向静态方法<br>constructor-arg的value属性是调用静态方法传入的参数</p>
 <p>实例方法</p>
 <ol>
 <li>创建实例工厂类、工厂方法</li>
@@ -524,6 +521,7 @@ constructor-arg的value属性是调用静态方法传入的参数</p>
     &#125;
 &#125;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="2">
 <li>spring.xml</li>
 </ol>
@@ -533,13 +531,12 @@ constructor-arg的value属性是调用静态方法传入的参数</p>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>car2<span class="token punctuation">"</span></span> <span class="token attr-name">factory-bean</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>instanceCarFactory<span class="token punctuation">"</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>getCar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>区别：<br>
-静态工厂方法创建Car对象，不需要实例化工厂对象，因为静态工厂的静态方法，不需要创建对象即可调用，spring-xml中只需要配置一个bean，即最终的结果Car即可。</p>
+
+<p>区别：<br>静态工厂方法创建Car对象，不需要实例化工厂对象，因为静态工厂的静态方法，不需要创建对象即可调用，spring-xml中只需要配置一个bean，即最终的结果Car即可。</p>
 <p>实例工厂方法创建Car对象。需要实例化工厂对象，因为getCar方法是非静态的，就必须通过实例化对象才能调用，所以必须创建工厂对象，spring.xml中需要配置两个bean，一个是工厂bean，一个是Car bean。</p>
 <p>spring.xml中<strong>class + factory-method</strong>的形式是直接调用类中的工厂方法</p>
 <p>spring.xml中<strong>factory-bean + factory-method</strong>的形式是调用工厂bean中的工厂方法，就必须先创建工厂bean。</p>
-<h3 id="Spring-IoC自动装载-autowire">Spring IoC自动装载 autowire</h3>
-<p>自动装载是spring提供的一种更加简便的方式来完成DI，不需要手动配置property。IoC容器会自动选择bean完成注入。</p>
+<h3 id="Spring-IoC自动装载-autowire"><a href="#Spring-IoC自动装载-autowire" class="headerlink" title="Spring IoC自动装载 autowire"></a>Spring IoC自动装载 autowire</h3><p>自动装载是spring提供的一种更加简便的方式来完成DI，不需要手动配置property。IoC容器会自动选择bean完成注入。</p>
 <p>自动装置有两种方式：</p>
 <ul>
 <li>byName，通过属性名来完成自动装载</li>
@@ -555,6 +552,7 @@ public class person &#123;
     private String name;
     private Car car;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="2">
 <li>在spring.xml中配置Car和Person对应的bean，并且通过自动装载完成依赖注入</li>
 </ol>
@@ -568,6 +566,7 @@ public class person &#123;
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>num<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>brand<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>奥迪<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>byType的操作方式</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>person<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.Person<span class="token punctuation">"</span></span> <span class="token attr-name">autowire</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>byType<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
@@ -579,10 +578,9 @@ public class person &#123;
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>num<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>brand<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>奥迪<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>使用byType进行自动装载时，必须保证IoC中只有一个符合条件的bean，否则会抛出异常信息。</p>
-<h3 id="Spring-IoC基于注解的开发">Spring IoC基于注解的开发</h3>
-<p>Spring IoC的作用是帮助开发者创建项目中所需要的bean，同时完成bean之间的依赖注入关系，DI。<br>
-实现该功能有两种方式。</p>
+<h3 id="Spring-IoC基于注解的开发"><a href="#Spring-IoC基于注解的开发" class="headerlink" title="Spring IoC基于注解的开发"></a>Spring IoC基于注解的开发</h3><p>Spring IoC的作用是帮助开发者创建项目中所需要的bean，同时完成bean之间的依赖注入关系，DI。<br>实现该功能有两种方式。</p>
 <ul>
 <li>基于XML配置。</li>
 <li>基于注解。</li>
@@ -593,6 +591,7 @@ public class person &#123;
 <li>添加注释</li>
 </ol>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">context:</span>component-scan</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>DI</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Data
 @Component
@@ -600,18 +599,20 @@ public class User &#123;
     private Integer id;
     private String name;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Data
 @Component(value &#x3D; &quot;myre&quot;)
 public class Repository &#123;
     @Autowired
     private User user;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>@Autowired 默认是通过byType进行注入的，如果要改为byName，需要配合Qualifier注解来完成</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Autowired
 @Qualifier(value &#x3D; &quot;us&quot;)
 private User user;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>表示将IoC中id为ds的bean注入到repository中。<br>
-实体类中普通的成员变量（String、包装类等）可以通过@value注解进行赋值</p>
+
+<p>表示将IoC中id为ds的bean注入到repository中。<br>实体类中普通的成员变量（String、包装类等）可以通过@value注解进行赋值</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">@Data
 @Component(value &#x3D; &quot;us&quot;)
 public class User &#123;
@@ -621,13 +622,14 @@ public class User &#123;
     private String name;
 
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>等同于spring.xml</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>us<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example.entity.User<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>张三<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="实际开发的使用">实际开发的使用</h3>
-<p>实际开发中我们会将程序分为三层：</p>
+
+<h3 id="实际开发的使用"><a href="#实际开发的使用" class="headerlink" title="实际开发的使用"></a>实际开发的使用</h3><p>实际开发中我们会将程序分为三层：</p>
 <ul>
 <li>Controller</li>
 <li>Service</li>
@@ -651,13 +653,11 @@ public String doRepository(Double score) &#123;
     &#125;
     return result;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>spring-annotation.xml</p>
 <pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>org.example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">context:</span>component-scan</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="Spring-AOP">Spring AOP</h2>
-<p>AOP (Aspect Oriented Programming) 面向切面编程。<br>
-OOP（Object Oriented Programming）面向对象编程，用对象化的思想来完成程序。<br>
-AOP是对OOP的一个补充，是在另外一个维度上抽象出对象。<br>
-具体是指程序运行时动态地将非业务代码切入到业务代码中，从而实现程序的解耦合，将非业务代码抽象成一个对象，对对象编程就是面向切面编程。</p>
+
+<h2 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h2><p>AOP (Aspect Oriented Programming) 面向切面编程。<br>OOP（Object Oriented Programming）面向对象编程，用对象化的思想来完成程序。<br>AOP是对OOP的一个补充，是在另外一个维度上抽象出对象。<br>具体是指程序运行时动态地将非业务代码切入到业务代码中，从而实现程序的解耦合，将非业务代码抽象成一个对象，对对象编程就是面向切面编程。</p>
 <p>AOP的优点：</p>
 <ul>
 <li>可以降低模块之间的耦合性</li>
@@ -676,6 +676,7 @@ AOP是对OOP的一个补充，是在另外一个维度上抽象出对象。<br>
     public int mul(int num1,int num2);
     public int div(int num1,int num2);
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ol start="2">
 <li>创建接口的实现类Calimpl</li>
 </ol>
@@ -701,14 +702,13 @@ AOP是对OOP的一个补充，是在另外一个维度上抽象出对象。<br>
         return num1&#x2F;num2;
     &#125;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>日志打印</p>
 <ul>
 <li>在每个方法开始位置输出参数信息</li>
 <li>在每个方法结束位置输出结果信息</li>
 </ul>
-<p>对于计算器来讲，加减乘除就是业务代码，日志打印就是非业务代码。<br>
-AOP如何实现？使用动态代理的方式来实现。<br>
-代理首先应该具备CalImpl的所有功能，并在此基础上，扩展出打印日志的功能。</p>
+<p>对于计算器来讲，加减乘除就是业务代码，日志打印就是非业务代码。<br>AOP如何实现？使用动态代理的方式来实现。<br>代理首先应该具备CalImpl的所有功能，并在此基础上，扩展出打印日志的功能。</p>
 <ol>
 <li>删除CalImpl方法中所有打印日志的代码，只保留业务代码。</li>
 <li>创建MyInvocationHandler类，实现InvocationHandler接口，生成动态代理类。</li>
@@ -736,8 +736,8 @@ AOP如何实现？使用动态代理的方式来实现。<br>
       <i class="fa fa-chevron-left"></i> ELEMENT-UI笔记
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/08/27/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91/" rel="next" title="大数据开发">
-      大数据开发 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/08/29/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0/" rel="next" title="大数据作业调度平台">
+      大数据作业调度平台 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -798,7 +798,7 @@ AOP如何实现？使用动态代理的方式来实现。<br>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC"><span class="nav-number">1.1.</span> <span class="nav-text">IOC 控制反转</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">开发步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IoC%E5%AE%B9%E5%99%A8%E5%88%9B%E5%BB%BAbean%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">IoC容器创建bean的两种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8EIoC%E5%AE%B9%E5%99%A8%E4%B8%AD%E5%8F%96bean"><span class="nav-number">1.1.3.</span> <span class="nav-text">从IoC容器中取bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bean%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%AD%E5%A6%82%E6%9E%9C%E5%8C%85%E5%90%AB%E6%9C%89%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%A4%84%E7%90%86%E5%8D%B3%E5%8F%AF"><span class="nav-number">1.1.4.</span> <span class="nav-text">bean的属性中如果包含有特殊字符，如下处理即可</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IoC-DI"><span class="nav-number">1.1.5.</span> <span class="nav-text">IoC DI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E4%B8%AD%E7%9A%84bean"><span class="nav-number">1.1.6.</span> <span class="nav-text">Spring中的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="nav-number">1.1.7.</span> <span class="nav-text">Spring的继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.8.</span> <span class="nav-text">Spring的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E8%AF%BB%E5%8F%96%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90"><span class="nav-number">1.1.9.</span> <span class="nav-text">Spring读取外部资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-p-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.10.</span> <span class="nav-text">Spring p 命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.11.</span> <span class="nav-text">Spring工厂方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-IoC%E8%87%AA%E5%8A%A8%E8%A3%85%E8%BD%BD-autowire"><span class="nav-number">1.1.12.</span> <span class="nav-text">Spring IoC自动装载 autowire</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-IoC%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%BC%80%E5%8F%91"><span class="nav-number">1.1.13.</span> <span class="nav-text">Spring IoC基于注解的开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.14.</span> <span class="nav-text">实际开发的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-AOP"><span class="nav-number">1.2.</span> <span class="nav-text">Spring AOP</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring"><span class="nav-number">1.</span> <span class="nav-text">Spring</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC-%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC"><span class="nav-number">1.1.</span> <span class="nav-text">IOC 控制反转</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.1.</span> <span class="nav-text">开发步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IoC%E5%AE%B9%E5%99%A8%E5%88%9B%E5%BB%BAbean%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.2.</span> <span class="nav-text">IoC容器创建bean的两种方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8EIoC%E5%AE%B9%E5%99%A8%E4%B8%AD%E5%8F%96bean"><span class="nav-number">1.1.3.</span> <span class="nav-text">从IoC容器中取bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bean%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%AD%E5%A6%82%E6%9E%9C%E5%8C%85%E5%90%AB%E6%9C%89%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%A4%84%E7%90%86%E5%8D%B3%E5%8F%AF"><span class="nav-number">1.1.4.</span> <span class="nav-text">bean的属性中如果包含有特殊字符，如下处理即可</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IoC-DI"><span class="nav-number">1.1.5.</span> <span class="nav-text">IoC DI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E4%B8%AD%E7%9A%84bean"><span class="nav-number">1.1.6.</span> <span class="nav-text">Spring中的bean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="nav-number">1.1.7.</span> <span class="nav-text">Spring的继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="nav-number">1.1.8.</span> <span class="nav-text">Spring的依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E8%AF%BB%E5%8F%96%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90"><span class="nav-number">1.1.9.</span> <span class="nav-text">Spring读取外部资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-p-%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="nav-number">1.1.10.</span> <span class="nav-text">Spring p 命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.11.</span> <span class="nav-text">Spring工厂方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-IoC%E8%87%AA%E5%8A%A8%E8%A3%85%E8%BD%BD-autowire"><span class="nav-number">1.1.12.</span> <span class="nav-text">Spring IoC自动装载 autowire</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-IoC%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E5%BC%80%E5%8F%91"><span class="nav-number">1.1.13.</span> <span class="nav-text">Spring IoC基于注解的开发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.14.</span> <span class="nav-text">实际开发的使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-AOP"><span class="nav-number">1.2.</span> <span class="nav-text">Spring AOP</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -814,7 +814,7 @@ AOP如何实现？使用动态代理的方式来实现。<br>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
