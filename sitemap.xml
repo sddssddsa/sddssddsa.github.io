@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sfx123.xyz/about/index.html</loc>
+    
+    <lastmod>2022-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://sfx123.xyz/tags/index.html</loc>
+    
+    <lastmod>2022-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://sfx123.xyz/2022/07/29/Element_UI/</loc>
     
     <lastmod>2022-08-30</lastmod>
@@ -38,25 +56,7 @@
   </url>
   
   <url>
-    <loc>http://sfx123.xyz/about/index.html</loc>
-    
-    <lastmod>2022-08-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://sfx123.xyz/yourdiy/index.html</loc>
-    
-    <lastmod>2022-08-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://sfx123.xyz/tags/index.html</loc>
     
     <lastmod>2022-08-27</lastmod>
     
