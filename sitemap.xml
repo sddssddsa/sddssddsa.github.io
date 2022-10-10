@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sfx123.xyz/2022/10/09/Spring-MVC/</loc>
+    
+    <lastmod>2022-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://sfx123.xyz/2022/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2022-09-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://sfx123.xyz/2022/09/01/Quartz%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98/</loc>
     
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-09-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,7 +94,7 @@
 
   <url>
     <loc>http://sfx123.xyz/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,28 +102,35 @@
   
   <url>
     <loc>http://sfx123.xyz/tags/VUE%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://sfx123.xyz/tags/Quartz/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://sfx123.xyz/tags/JAVA%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://sfx123.xyz/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2022-09-05</lastmod>
+    <lastmod>2022-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://sfx123.xyz/tags/Spring/</loc>
+    <lastmod>2022-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
