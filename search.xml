@@ -1,72 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ELEMENT-UI笔记</title>
-    <url>/2022/07/29/Element_UI/</url>
-    <content><![CDATA[<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="element-ui"><a href="#element-ui" class="headerlink" title="element_ui"></a>element_ui</h2><h3 id="Icon图标"><a href="#Icon图标" class="headerlink" title="Icon图标"></a>Icon图标</h3><p>提供了一套常用的图标集合，直接用i标签集合class来使用：</p>
-<pre class="line-numbers language-Vue" data-language="Vue"><code class="language-Vue">&lt;i class&#x3D;&quot;el-icon-edit&quot;&gt;&lt;&#x2F;i&gt;
-&lt;i class&#x3D;&quot;el-icon-share&quot;&gt;&lt;&#x2F;i&gt;
-&lt;i class&#x3D;&quot;el-icon-delete&quot;&gt;&lt;&#x2F;i&gt;
-&lt;el-button type&#x3D;&quot;primary&quot; icon&#x3D;&quot;el-icon-search&quot;&gt;搜索&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>e-icon-iconName为官网定义的名称，直接去官网查找对应的图标，修改class属性即可。</p>
-<span id="more"></span>
-
-<h3 id="Button按钮"><a href="#Button按钮" class="headerlink" title="Button按钮"></a>Button按钮</h3><p>是Element UI提供的一组常用的操作按钮组件，直接使用已经封装好的el-button，比如：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;el-button&gt;按钮&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>基于button按钮，可以使用type、plain、round、circle属性对按钮进行修饰。<br>type设置按钮样式</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
-  &lt;el-button&gt;默认按钮&lt;&#x2F;el-button&gt;
-  &lt;el-button type&#x3D;&quot;primary&quot;&gt;主要按钮&lt;&#x2F;el-button&gt;
-  &lt;el-button type&#x3D;&quot;success&quot;&gt;成功按钮&lt;&#x2F;el-button&gt;
-  &lt;el-button type&#x3D;&quot;info&quot;&gt;信息按钮&lt;&#x2F;el-button&gt;
-  &lt;el-button type&#x3D;&quot;warning&quot;&gt;警告按钮&lt;&#x2F;el-button&gt;
-  &lt;el-button type&#x3D;&quot;danger&quot;&gt;危险按钮&lt;&#x2F;el-button&gt;
-&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>plain可以减弱按钮的背景颜色效果![avatar1]</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
-    &lt;el-button plain&gt;默认按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;primary&quot; plain&gt;主要按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;success&quot; plain&gt;成功按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;info&quot; plain&gt;信息按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;warning&quot; plain&gt;警告按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;danger&quot; plain&gt;危险按钮&lt;&#x2F;el-button&gt;
-&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="/2022/07/29/Element_UI/20220818164409.png" class="">  
-
-
-
-<p>round 用来给按钮设置圆角</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
-    &lt;el-button round&gt;圆角按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;primary&quot; round&gt;主要按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;success&quot; round&gt;成功按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;info&quot; round&gt;信息按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;warning&quot; round&gt;警告按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;danger&quot; round&gt;危险按钮&lt;&#x2F;el-button&gt;
-&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="/2022/07/29/Element_UI/20220818164652.png" class="">  
-
-<p>circle</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
-    &lt;el-button circle&gt;圆角按钮 &lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;primary&quot; circle&gt;主要按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;success&quot; circle&gt;成功按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;info&quot; icon&#x3D;&quot;el-icon-message&quot; circle&gt;信息按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;warning&quot; circle&gt;警告按钮&lt;&#x2F;el-button&gt;
-    &lt;el-button type&#x3D;&quot;danger&quot; circle&gt;危险按钮&lt;&#x2F;el-button&gt;
-&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="/2022/07/29/Element_UI/20220819091011.png" class="">  
-
-
-]]></content>
-      <tags>
-        <tag>VUE学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Quartz原理与实战</title>
     <url>/2022/09/01/Quartz%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98/</url>
     <content><![CDATA[<h1 id="定时任务与基本概念"><a href="#定时任务与基本概念" class="headerlink" title="定时任务与基本概念"></a>定时任务与基本概念</h1><p>在指定的时间，做指定的动作</p>
@@ -253,6 +187,439 @@ public class DFUtil &#123;
 ]]></content>
       <tags>
         <tag>Quartz</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ELEMENT-UI笔记</title>
+    <url>/2022/07/29/Element_UI/</url>
+    <content><![CDATA[<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><h2 id="element-ui"><a href="#element-ui" class="headerlink" title="element_ui"></a>element_ui</h2><h3 id="Icon图标"><a href="#Icon图标" class="headerlink" title="Icon图标"></a>Icon图标</h3><p>提供了一套常用的图标集合，直接用i标签集合class来使用：</p>
+<pre class="line-numbers language-Vue" data-language="Vue"><code class="language-Vue">&lt;i class&#x3D;&quot;el-icon-edit&quot;&gt;&lt;&#x2F;i&gt;
+&lt;i class&#x3D;&quot;el-icon-share&quot;&gt;&lt;&#x2F;i&gt;
+&lt;i class&#x3D;&quot;el-icon-delete&quot;&gt;&lt;&#x2F;i&gt;
+&lt;el-button type&#x3D;&quot;primary&quot; icon&#x3D;&quot;el-icon-search&quot;&gt;搜索&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>e-icon-iconName为官网定义的名称，直接去官网查找对应的图标，修改class属性即可。</p>
+<span id="more"></span>
+
+<h3 id="Button按钮"><a href="#Button按钮" class="headerlink" title="Button按钮"></a>Button按钮</h3><p>是Element UI提供的一组常用的操作按钮组件，直接使用已经封装好的el-button，比如：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;el-button&gt;按钮&lt;&#x2F;el-button&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>基于button按钮，可以使用type、plain、round、circle属性对按钮进行修饰。<br>type设置按钮样式</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
+  &lt;el-button&gt;默认按钮&lt;&#x2F;el-button&gt;
+  &lt;el-button type&#x3D;&quot;primary&quot;&gt;主要按钮&lt;&#x2F;el-button&gt;
+  &lt;el-button type&#x3D;&quot;success&quot;&gt;成功按钮&lt;&#x2F;el-button&gt;
+  &lt;el-button type&#x3D;&quot;info&quot;&gt;信息按钮&lt;&#x2F;el-button&gt;
+  &lt;el-button type&#x3D;&quot;warning&quot;&gt;警告按钮&lt;&#x2F;el-button&gt;
+  &lt;el-button type&#x3D;&quot;danger&quot;&gt;危险按钮&lt;&#x2F;el-button&gt;
+&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>plain可以减弱按钮的背景颜色效果![avatar1]</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
+    &lt;el-button plain&gt;默认按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;primary&quot; plain&gt;主要按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;success&quot; plain&gt;成功按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;info&quot; plain&gt;信息按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;warning&quot; plain&gt;警告按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;danger&quot; plain&gt;危险按钮&lt;&#x2F;el-button&gt;
+&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="/2022/07/29/Element_UI/20220818164409.png" class="">  
+
+
+
+<p>round 用来给按钮设置圆角</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
+    &lt;el-button round&gt;圆角按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;primary&quot; round&gt;主要按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;success&quot; round&gt;成功按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;info&quot; round&gt;信息按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;warning&quot; round&gt;警告按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;danger&quot; round&gt;危险按钮&lt;&#x2F;el-button&gt;
+&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="/2022/07/29/Element_UI/20220818164652.png" class="">  
+
+<p>circle</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;el-row&gt;
+    &lt;el-button circle&gt;圆角按钮 &lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;primary&quot; circle&gt;主要按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;success&quot; circle&gt;成功按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;info&quot; icon&#x3D;&quot;el-icon-message&quot; circle&gt;信息按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;warning&quot; circle&gt;警告按钮&lt;&#x2F;el-button&gt;
+    &lt;el-button type&#x3D;&quot;danger&quot; circle&gt;危险按钮&lt;&#x2F;el-button&gt;
+&lt;&#x2F;el-row&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<img src="/2022/07/29/Element_UI/20220819091011.png" class="">  
+
+
+]]></content>
+      <tags>
+        <tag>VUE学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring cloud微服务</title>
+    <url>/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<h1 id="Spring-Cloud"><a href="#Spring-Cloud" class="headerlink" title="Spring Cloud"></a>Spring Cloud</h1><h3 id="微服务产生的背景"><a href="#微服务产生的背景" class="headerlink" title="微服务产生的背景"></a>微服务产生的背景</h3><img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-02-11-03-06.png" class="" title="单体应用架构">
+<p><strong>单体应用存在的问题</strong>：</p>
+<blockquote>
+<ul>
+<li>随着业务的发展，开发变得越来越复杂。</li>
+<li>修改、新增某个功能，需要对整个系统进行测试，重新部署。</li>
+<li>一个模块出现问题，很可能导致整个系统崩溃。</li>
+<li>多团队同时对数据进行管理，容易产生安全漏洞。</li>
+<li>各个模块使用同一种技术框架，局限性太大，很难根据业务选择最适合的技术架构。</li>
+<li>模块内容太复杂，如果员工离职，可能需要很长时间才能完成任务交接。</li>
+</ul>
+</blockquote>
+<p>为了解决上述问题，微服务架构应运而生，简单来说，<strong>微服务就是将一个单体应用拆分成若干个小型服务</strong>，协同完成系统功能的一种架构模式，在系统架构层面进行解耦合，将一个复杂问题拆分成若干个简单问题。<br>这样的好处是对于每一个简单问题，开发、维护部署的难度就降低了很多，可以实现自治，可以自主选择最适合的技术框架，提高了项目开发的灵活性。<br>微服务架构不仅是简单的拆分，拆分之后的各个微服务之间还要进行通信，否则就无法协同完成需求。<br>微服务之间只需要制定统一的协议即可，至于每个微服务使用什么技术框架来完成，统统不需要关心。<br>这种松耦合的方式使开发、部署都变得更加灵活，同时系统更容易拓展，降低了开发、运维的难度。</p>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-02-11-28-04.png" class="" title="微服务应用架构">
+
+<span id="more"></span>
+<h3 id="微服务的优点"><a href="#微服务的优点" class="headerlink" title="微服务的优点"></a>微服务的优点</h3><blockquote>
+<ul>
+<li>各个服务之间实现了<strong>松耦合</strong>，彼此之间不需要关注对方是用什么语言开发，什么技术开发，只需要保证自己的接口可以正常访问即可，通过标准协议访问其他接口即可。</li>
+<li>各个微服务之间<strong>独立自治</strong>，只需要专注于做好自己的业务，开发和维护不会影响到其他的微服务。</li>
+<li>微服务是一种<strong>去中心化</strong>的架构方式，相当于用零件拼接一台机器，如果某个零件出现问题，可以随时进行替换，从而保证机器的正常运行。</li>
+</ul>
+</blockquote>
+<h3 id="微服务的不足"><a href="#微服务的不足" class="headerlink" title="微服务的不足"></a>微服务的不足</h3><blockquote>
+<ul>
+<li>如果某个系统的远程调用出现问题,导致微服务不可用，就有可能产生级联反应，造成整个系统的崩溃。</li>
+<li>如果某个需求需要调用多个微服务，如何来保证数据的一致性。</li>
+<li>相比较与单体应用，微服务的学习难度会增加，对于新加入团队的员工来讲，如何快速掌握上手微服务架构，是一个问题。</li>
+</ul>
+</blockquote>
+<h3 id="微服务设计原则"><a href="#微服务设计原则" class="headerlink" title="微服务设计原则"></a>微服务设计原则</h3><p>从大到小，提炼出核心需求，搞清楚服务间的交互关系，先拆分成粒度较大的服务，然后再根据具体的业务需求逐步细化服务粒度，最终形成一套合理的微服务系统架构。</p>
+<ul>
+<li>服务粒度不能太小也不能太大，提炼核心需求，根据服务间的交互关系找到最合理的服务粒度。</li>
+<li>各个微服务的功能和职责尽量单一，避免出现多个服务处理同一个需求。</li>
+<li>各个微服务之间要相互独立、自治，自主开发、自主测试、自主部署、自主维护。</li>
+<li>保证数据的独立性，各个微服务独立管理其业务模型下的数据。</li>
+<li>使用RESTful协议完成微服务之间的写作任务，数据交互采用JSON格式，方便调用和整合。</li>
+</ul>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-03-10-01-32.png" class="" title="微服务架构">
+
+<h3 id="微服务架构的核心组件"><a href="#微服务架构的核心组件" class="headerlink" title="微服务架构的核心组件"></a>微服务架构的核心组件</h3><ul>
+<li>服务治理<ul>
+<li>服务注册</li>
+<li>服务发现</li>
+</ul>
+</li>
+</ul>
+<p>提供服务的叫做服务提供者。调用服务的叫做服务消费者。</p>
+<ul>
+<li>服务负载均衡</li>
+<li>服务网关</li>
+<li>微服务容错机制</li>
+<li>分布式配置</li>
+<li>服务监控</li>
+</ul>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>Spring Cloud<br>微服务是一种分布式软件架构设计方式，具体的落地方案有很多，Dubbo、Spring Boot&#x2F;Spring Cloud、Motan等等，Spring Cloud基于Spring Boot使得整体的开发、配置、部署都非常方便，可以快速搭建基于微服务的分布式应用，Spring Cloud相当于微服务各个组件的集大成者。</p>
+<h3 id="Spring-Boot和Spring-Cloud的关系"><a href="#Spring-Boot和Spring-Cloud的关系" class="headerlink" title="Spring Boot和Spring Cloud的关系"></a>Spring Boot和Spring Cloud的关系</h3><p>Spring Boot快速搭建基础系统，Spring Cloud在此基础上实现分布式系统中的公共组件，如服务注册、服务发现、配置管理、熔断器、控制总线等，服务调用方式是基于REST API。</p>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-03-11-24-58.png" class="" title="Spring Cloud组件">
+
+<hr>
+<h3 id="搭建微服务系统的核心中枢"><a href="#搭建微服务系统的核心中枢" class="headerlink" title="搭建微服务系统的核心中枢"></a>搭建微服务系统的核心中枢</h3><p>服务治理的核心组件：</p>
+<ul>
+<li>服务提供者</li>
+<li>服务消费者</li>
+<li>注册中心</li>
+</ul>
+<p>分布式系统架构中，每个微服务在启动时，将自己的信息存储再注册中心，<strong>服务注册</strong>。  </p>
+<p>服务消费者从注册中心查询服务提供者的网络信息，并通过此信息调用服务提供者的接口，<strong>服务发现</strong>。  </p>
+<p>注册中心管理各个微服务：通过<strong>心跳机制</strong>，每隔一定的时间微服务会向注册中心进行汇报，如果注册中心长时间无法与某个微服务通信，就会自动销毁该服务。  </p>
+<p>当某个微服务的网络信息发生变化是，也会重新注册。</p>
+<p>服务提供者、服务消费者、注册中心的关联：</p>
+<ul>
+<li>启动注册中心</li>
+<li>服务提供者启动时，在注册中心可注册一个可以提供服务的实例。</li>
+<li>服务消费者启动，在注册中心订阅需要调用的服务。</li>
+<li>注册中心将服务提供者的信息推送给服务消费者。</li>
+<li>服务消费者通过相关信息（IP、端口）调用服务提供者的服务。</li>
+</ul>
+<p><strong>注册中心核心模块</strong>：</p>
+<ul>
+<li>服务注册表</li>
+<li>服务注册</li>
+<li>服务发现</li>
+<li>服务检查（通过心跳机制完成各个微服务之间的通信）</li>
+</ul>
+<p>Spring Cloud的服务治理可以使用<strong>Eureka</strong>组件。</p>
+<p><strong>什么是Eureka？</strong></p>
+<blockquote>
+<p>Spring Cloud Eureka，提供服务注册和服务发现的功能。</p>
+</blockquote>
+<h3 id="Spring-Cloud-Eureka的组成"><a href="#Spring-Cloud-Eureka的组成" class="headerlink" title="Spring Cloud Eureka的组成"></a>Spring Cloud Eureka的组成</h3><p>Eureka Server 服务端<br>Eureka Client 客户端</p>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-03-15-46-30.png" class="" title="Eureka">
+
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><ol>
+<li>创建Maven父工程，pom.xml</li>
+</ol>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span>
+         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">></span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.sfx<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>springcloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>1.0-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.1.2.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencyManagement</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-dependencies<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>Greenwich.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span><span class="token punctuation">></span></span>pom<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>type</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>import<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencyManagement</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.source</span><span class="token punctuation">></span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.source</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>maven.compiler.target</span><span class="token punctuation">></span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>maven.compiler.target</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project.build.sourceEncoding</span><span class="token punctuation">></span></span>UTF-8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project.build.sourceEncoding</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>在父工程目录下创建Module，实现Eureka Server，pom.xml。</li>
+</ol>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-netflix-eureka-server<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>application.yml</li>
+</ol>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">server:
+  port: 8761
+eureka:
+  client:
+#    是否将当前的eureka服务作为客户端注册进去（是否注册自己）
+    register-with-eureka: false
+#    获取其他eureka数据信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http:&#x2F;&#x2F;localhost:8761&#x2F;eureka&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>创建启动类</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx;
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication &#123;
+    public static void main(String[] args) &#123;
+        SpringApplication.run(EurekaServerApplication.class,args);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="5">
+<li>启动，访问 <a href="http://localhost:8761/">http://localhost:8761</a> ,可以看到如下界面，启动成功。</li>
+</ol>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-03-23-45-29.png" class="" title="启动页面">
+
+<hr>
+<h3 id="注册第一个微服务"><a href="#注册第一个微服务" class="headerlink" title="注册第一个微服务"></a>注册第一个微服务</h3><p>服务提供者和服务消费者都是通过Eureka Client连接到Eureka Server完成注册。  </p>
+<p>1.创建Modelu，实现Eureka Clinet。</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>application.yml</li>
+</ol>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">server:
+  port: 8010
+spring:
+  application:
+    name: provider
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http:&#x2F;&#x2F;localhost:8761&#x2F;eureka&#x2F;
+instance:
+#      是否注册ip地址
+    prefer-ip-address: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>创建启动类</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProviderApplication &#123;
+    public static void main(String[] args) &#123;
+        SpringApplication.run(ProviderApplication.class,args);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>创建实体类</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class Student &#123;
+    private Integer id;
+    private String name;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="5">
+<li>创建Repository</li>
+</ol>
+<p>接口</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx.repository;
+
+import com.sfx.entity.Student;
+
+import java.util.Collection;
+
+public interface StudentRepository &#123;
+    public Collection&lt;Student&gt; findAll();
+    public Student findById(Integer id);
+    public void saveOrUpdate(Student student);
+    public void deleteById(Integer id);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>实现类</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx.repository.impl;
+
+import com.sfx.entity.Student;
+import com.sfx.repository.StudentRepository;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
+@Repository
+public class StudentRepositoryImpl implements StudentRepository &#123;
+
+    private static Map&lt;Integer,Student&gt; map;
+    static &#123;
+        map &#x3D; new HashMap&lt;&gt;();
+        map.put(1,new Student(1,&quot;张三&quot;));
+        map.put(2,new Student(2,&quot;李四&quot;));
+        map.put(3,new Student(3,&quot;王五&quot;));
+    &#125;
+
+    @Override
+    public Collection&lt;Student&gt; findAll() &#123;
+        return map.values();
+    &#125;
+
+    @Override
+    public Student findById(Integer id) &#123;
+        return map.get(id);
+    &#125;
+
+    @Override
+    public void saveOrUpdate(Student student) &#123;
+        map.put(student.getId(),student);
+    &#125;
+
+    @Override
+    public void deleteById(Integer id) &#123;
+        map.remove(id);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="6">
+<li>StudentHandler</li>
+</ol>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.sfx.controller;
+
+import com.sfx.entity.Student;
+import com.sfx.repository.StudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Collection;
+
+@RestController
+@RequestMapping(&quot;&#x2F;provider&quot;)
+public class StudentHandler &#123;
+    @Autowired
+    private StudentRepository studentRepository;
+    
+    @GetMapping(&quot;&#x2F;findAll&quot;)
+    public Collection&lt;Student&gt; findAll()&#123;
+        return studentRepository.findAll();
+    &#125;
+    
+    @GetMapping(&quot;&#x2F;findById&#x2F;&#123;id&#125;&quot;)
+    public Student findById(@PathVariable(&quot;id&quot;) Integer id)&#123;
+        return studentRepository.findById(id);
+    &#125;
+    
+    
+    @PostMapping(&quot;&#x2F;save&quot;)
+    public void save(@RequestBody Student student)&#123;
+        studentRepository.saveOrUpdate(student);
+    &#125;
+    
+    @PutMapping(&quot;&#x2F;update&quot;)
+    public void update(@RequestBody Student student)&#123;
+        studentRepository.saveOrUpdate(student);
+    &#125;
+    
+    @DeleteMapping(&quot;&#x2F;deleteById&#x2F;&#123;id&#125;&quot;)
+    public void deleteById(@PathVariable(&quot;id&quot;) Integer id)&#123;
+        studentRepository.deleteById(id);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>接口测试</p>
+<img src="/2022/11/02/Spring-cloud%E5%BE%AE%E6%9C%8D%E5%8A%A1/2022-11-04-01-57-20.png" class="" title="接口测试">
+
+<hr>
+<h3 id="RestTemplate"><a href="#RestTemplate" class="headerlink" title="RestTemplate"></a>RestTemplate</h3><p>通过RestTemplate可以实现不同微服务之间的调用。  </p>
+<p><strong>RestTemplate</strong>是Spring框架提供的一种基于RESTful的服务组件，底层对HTTP请求及相应进行了封装，提供了很多访问远程REST服务的方法，可以简化代码的开发。</p>
+<h3 id="如何使用RestTemplate"><a href="#如何使用RestTemplate" class="headerlink" title="如何使用RestTemplate"></a>如何使用RestTemplate</h3>]]></content>
+      <tags>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -703,7 +1070,7 @@ public String doRepository(Double score) &#123;
 <p>动态代理类，需要动态生成，需要获取到委托类的接口信息，根据这些接口信息，动态生成一个代理类，然后再由ClassLoader用来将动态生成的类加载到JVM中</p>
 ]]></content>
       <tags>
-        <tag>JAVA学习</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -819,6 +1186,8 @@ public String doRepository(Double score) &#123;
 <li><strong>ModelAndView</strong>：封装了模型数据和视图信息，作为Handler的处理结果，返回给DispatcherServlet。</li>
 <li><strong>ViewResolver</strong>：视图解析器，DispatcherServlet通过它将逻辑视图解析为物理视图，最终将渲染的结果响应给客户端。</li>
 </ul>
+<span id="more"></span>
+
 <h4 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h4><ol>
 <li>客户端请求被DispatcherServlet接受。</li>
 <li>根据HandlerMapping映射到具体的Handler。</li>
@@ -831,7 +1200,11 @@ public String doRepository(Double score) &#123;
 <li>DispatcherServlet根据View进行视图渲染（将模型数据填充到视图中）。</li>
 <li>DispatcherServlet将渲染之后的视图响应给客户端。</li>
 </ol>
-<span id="more"></span>
+<img src="/2022/10/09/Spring-MVC/2022-10-25-19-25-43.png" class="" title="MVC工作流程图">
+
+<h3 id="Spring-MVC具体使用"><a href="#Spring-MVC具体使用" class="headerlink" title="Spring MVC具体使用"></a>Spring MVC具体使用</h3><ol>
+<li>创建一个Maven工程，pom.xml中添加依赖</li>
+</ol>
 ]]></content>
       <tags>
         <tag>Spring</tag>
